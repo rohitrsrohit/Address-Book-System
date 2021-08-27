@@ -87,6 +87,7 @@ public class Contact {
 
     public boolean equals(Object object) {
         boolean result = false;
+
         if(object == this) {
             return true;
         }
@@ -98,15 +99,6 @@ public class Contact {
     }
     @Override
     public String toString() {
-        return "Contact{" +
-                "firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", address='" + address + '\'' +
-                ", city='" + city + '\'' +
-                ", state='" + state + '\'' +
-                ", zip=" + zip +
-                ", phoneNumber=" + phoneNumber +
-                ", email='" + email + '\'' +
-                '}';
+        return this.getFirstName() + " " + this.getLastName() + " " + this.getAddress() + " " + this.getPhoneNumber() + " " + this.getEmail();
     }
 }
