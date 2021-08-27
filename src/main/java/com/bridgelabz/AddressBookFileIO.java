@@ -46,6 +46,7 @@ public class AddressBookFileIO {
                 //first part is name, second is age
                 String bookName = parts[0].trim();
                 String fname = parts[1].trim();
+
                 mapFileContents.put(bookName, fname);
             }
         } catch (Exception e) {

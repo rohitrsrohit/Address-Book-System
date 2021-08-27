@@ -13,7 +13,7 @@ public class AddressBook {
     static Scanner sc = new Scanner(System.in);
     static AddressBook addressBook = new AddressBook();
 
-    public static boolean addContact(Contacts contact) {
+    public static boolean   addContact(Contacts contact) {
         List<Contacts> checkByName = searchByName(contact.getfName());
         for (Contacts equalName : checkByName) {
             if (equalName.equals(contact))
@@ -67,7 +67,7 @@ public class AddressBook {
         contactList.add(editedContact);
         return true;
     }
-    //method for delete contact
+    //method for deleting contact
     public static boolean deleteContact(Contacts contacts) {
         contactList.remove(contacts);
         return true;
@@ -106,7 +106,7 @@ public class AddressBook {
         String email = sc.nextLine();
         return new Contacts(firstName, lastName, address, city, state, zip, phoneNum, email);
     }
-    //method for show option for contacts
+    //method for showing option for contacts
     public void addressBookOptions(AddressBook addressBook) {
         Scanner sc = new Scanner(System.in);
         while (true) {
@@ -123,7 +123,7 @@ public class AddressBook {
             switch (choice) {
                 case 1:
                     if (addContact(readContact()))   //call addcontact with passing method readcontact
-                        System.out.println("Cotact Added Successfully....!");
+                        System.out.println("Contact Added Successfully....!");
                     else
                         System.out.println("Contact Already Exist....!");
                     break;
@@ -161,7 +161,7 @@ public class AddressBook {
                         int index = sc.nextInt();
                         sc.nextLine();
                         deleteContact(equalName.get(index));
-                        System.out.println("Cotact data deleted....!");
+                        System.out.println("Contact data deleted....!");
                     }
                     break;
                 case 4:
@@ -178,7 +178,7 @@ public class AddressBook {
             }
         }
     }
-    //method for search contacts by option
+    //method for searching contacts by option
     public static void searchByOptions() {
         System.out.println("1. Search By name");
         System.out.println("2. Search By city");
@@ -209,7 +209,7 @@ public class AddressBook {
                 System.out.println("INVALID CHOICE!");
         }
     }
-    //method for view element by option
+    //method for viewing element by option
     public static void viewByOption(Map<String, AddressBook> addressBookMap) {
         System.out.println("1. View By name");
         System.out.println("2. View By city");
