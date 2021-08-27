@@ -1,69 +1,72 @@
 package com.bridgelabz;
 
 public class Contact {
-    private String fName;
-    private String lName;
+    private String firstName;
+    private String lastName;
     private String address;
     private String city;
     private String state;
-    private Long zip;
-    private Long phone;
+    private String zip;
+    private String phoneNumber;
     private String email;
 
-    public Contact(String fName, String lName, String address, String city, String state, Long zip, Long phone,
-                   String email) {
-        this.fName = fName;
-        this.lName = lName;
+    public Contact(String firstName, String lastName, String address, String city, String zip, String phoneNumber, String email) {
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.address = address;
         this.city = city;
-        this.state = state;
         this.zip = zip;
-        this.phone = phone;
+        this.phoneNumber = phoneNumber;
         this.email = email;
     }
 
-    public String getfName() {
-        return fName;
+    public String getFirstName() {
+        return firstName;
     }
-
-    public void setfName(String fName) {
-        this.fName = fName;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
-
-    public String getCity() {
-        return city;
+    public String getLastName() {
+        return lastName;
     }
-
-    public void setCity(String city) {
-        this.city = city;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
-
-    public String getState() {
-        return state;
-    }
-
-    public void setState(String state) {
-        this.state = state;
-    }
-
-    public String getlName() {
-        return lName;
-    }
-
     public String getAddress() {
         return address;
     }
-
-    public Long getZip() {
+    public void setAddress(String address) {
+        this.address = address;
+    }
+    public String getCity() {
+        return city;
+    }
+    public void setCity(String city) {
+        this.city = city;
+    }
+    public String getState() {
+        return state;
+    }
+    public void setState(String state) {
+        this.state = state;
+    }
+    public String getZip() {
         return zip;
     }
-
-    public Long getPhone() {
-        return phone;
+    public void setZip(String zip) {
+        this.zip = zip;
     }
-
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
     public String getEmail() {
         return email;
+    }
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     @Override
@@ -74,9 +77,9 @@ public class Contact {
             return false;
 
         Contact other = (Contact) obj;
-        if (!(fName.equalsIgnoreCase(other.getfName())))
+        if (!(firstName.equalsIgnoreCase(other.getFirstName())))
             return false;
-        if (!(lName.equalsIgnoreCase(other.getlName())))
+        if (!(lastName.equalsIgnoreCase(other.getLastName())))
             return false;
         if (!(address.equalsIgnoreCase(other.getAddress())))
             return false;
@@ -86,7 +89,7 @@ public class Contact {
             return false;
         if (!zip.equals(other.getZip()))
             return false;
-        if (!(phone.equals(other.getPhone())))
+        if (!(phoneNumber.equals(other.getPhoneNumber())))
             return false;
         return email.equals(other.getEmail());
     }
@@ -94,13 +97,13 @@ public class Contact {
     @Override
     public String toString() {
         return "Contacts{" +
-                "fName='" + fName + '\'' +
-                ", lName='" + lName + '\'' +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
                 ", address='" + address + '\'' +
                 ", city='" + city + '\'' +
                 ", state='" + state + '\'' +
                 ", zip=" + zip +
-                ", phone=" + phone +
+                ", phone=" + phoneNumber +
                 ", email='" + email + '\'' +
                 '}';
     }
